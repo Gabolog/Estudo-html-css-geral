@@ -1,0 +1,4 @@
+img {position: absolute; top: 10px; left: 20px; display: none}
+table:hover + img {display:block !important}
+
+span {display :block}
