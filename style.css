@@ -1,4 +1,53 @@
-img {position: absolute; top: 10px; left: 20px; display: none}
-table:hover + img {display:block !important}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
 
-span {display :block}
+span {display: block;}
+
+.gameList
+{
+    padding: 15px;
+    list-style:none;
+    background-color: #1f232e;
+}
+/*''align-items: center'' ele é meio que uma parada q precisa do flex pra funcionar */
+.gameItem
+{
+    
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #292e3d
+}
+
+.gameItem:last-child {
+    border-bottom: none;
+}
+
+.gameImg
+{
+    height: 40px;
+    width: 107px;
+    margin-right: 12px;
+
+
+}
+
+.gameName{
+    margin-right: 200px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.gamePlayersNumber{
+    color: #a3cf06;
+}
+.gamePlayersOnline{
+    margin-left: 12px;
+
+    color: rgb(255, 255, 255);
+}
+
+/* .gameItem:nth-child(2) chama a segunda classe gameItem */
