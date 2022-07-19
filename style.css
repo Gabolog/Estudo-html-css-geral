@@ -9,42 +9,84 @@ span {display: block;}
 
 .gameList
 {
+    max-width: 700px;
     padding: 15px;
     list-style:none;
     background-color: #1f232e;
+    border-bottom: 2px solid red;
+    border-top: 2px solid #a3cf06;
+    border-radius: 10px;
+    
 }
 /*''align-items: center'' ele é meio que uma parada q precisa do flex pra funcionar */
 .gameItem
 {
-    
-    display: flex;
+    position: relative;
+    border-width: 30%;
+    display: grid;
     align-items: center;
-    border-bottom: 1px solid #292e3d
+    border-bottom: 1px solid #292e3d;
+    grid-template-columns: 119px 4fr 1fr 1fr;
+}
+.gameItem .gameBoxInformation {
+    width: 270px;
+    border-radius: 10px;
+    color: white;
+    padding: 14px;
+    z-index: 1;
+    display: none;
+    background-color: #292e3d;
+    position: absolute;
+    top: 0; right: -300px; 
+    
+}
+/* block revela bloco */
+.gameItem:hover .gameBoxInformation {display: block;}
+.gameItem:hover .gameBoxInformation img {
+    width: 100%;
 }
 
 .gameItem:last-child {
     border-bottom: none;
+    
 }
 
 .gameImg
 {
     height: 40px;
     width: 107px;
-    margin-right: 12px;
-
+   
 
 }
 
 .gameName{
-    margin-right: 200px;
+    overflow: hidden; 
+    /* esconde o texto */
+    text-overflow: ellipsis;
+    /* continuidade ... */
+    white-space: nowrap;
+    /* nao quebra linha */
+
     font-size: 14px;
     color: rgb(255, 255, 255);
 }
 
 .gamePlayersNumber{
     color: #a3cf06;
+    overflow: hidden; 
+    /* esconde o texto */
+    text-overflow: ellipsis;
+    /* continuidade ... */
+    white-space: nowrap;
+    /* nao quebra linha */
 }
 .gamePlayersOnline{
+    overflow: hidden; 
+    /* esconde o texto */
+    text-overflow: ellipsis;
+    /* continuidade ... */
+    white-space: nowrap;
+    /* nao quebra linha */
     margin-left: 12px;
 
     color: rgb(255, 255, 255);
